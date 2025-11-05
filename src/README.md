@@ -213,7 +213,6 @@ DELETE /api/history/conversations/{conversation_id}
 | **Qwen3-14B** | Qwen/Qwen3-14B | LLM (파인튜닝) |
 | **MMS-TTS** | facebook/mms-tts-kor | TTS |
 | **SQLite** | - | 대화 이력 저장 |
-| **SQLAlchemy** | - | ORM |
 
 ### Mobile
 | 기술 | 용도 |
@@ -223,7 +222,7 @@ DELETE /api/history/conversations/{conversation_id}
 | **React Navigation** | 화면 네비게이션 |
 | **Expo Audio** | 음성 녹음/재생 |
 
-## 선택 기능: Vertex AI Memory Bank
+## Vertex AI Memory Bank
 
 SQLite 외에 Google Cloud Vertex AI Memory Bank를 사용하여 대화 이력을 클라우드에 저장할 수 있습니다.
 
