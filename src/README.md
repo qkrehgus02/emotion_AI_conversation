@@ -2,33 +2,33 @@
 
 음성 감정 인식과 공감적 대화를 결합한 AI 챗봇 시스템입니다.
 
-## 📱 프로젝트 구성
+## 프로젝트 구성
 
 - **Backend**: FastAPI 기반 AI 서버 (STT, 감정 인식, LLM, TTS)
 - **Mobile**: React Native (Expo) 모바일 앱
 
-## ✨ 주요 기능
+## 주요 기능
 
-### 🎤 음성 감정 인식 (Speech Emotion Recognition)
+### 음성 감정 인식 (Speech Emotion Recognition)
 - Whisper 인코더 기반 감정 분류
 - 8가지 감정 클래스: neutral, calm, happy, sad, angry, fearful, disgust, surprised
 - Top-3 감정 확률 제공
 
-### 🗣️ 음성-텍스트 변환 (STT)
+### 음성-텍스트 변환 (STT)
 - OpenAI Whisper 모델 (whisper-base)
 - 한국어 음성 인식 최적화
 
-### 💬 공감적 대화 생성 (LLM)
+### 공감적 대화 생성 (LLM)
 - **파인튜닝된 Qwen3-14B 모델** 사용 (공감 대화 특화)
 - 감정을 고려한 공감적 응답
 - Toxic Positivity 방지 (피상적 위로 차단)
 - 자연스러운 한국어 구어체
 
-### 🔊 음성 합성 (TTS)
+### 음성 합성 (TTS)
 - Facebook MMS-TTS Korean 모델
 - 자연스러운 한국어 음성 합성
 
-### 💾 대화 이력 관리
+### 대화 이력 관리
 - **SQLite**: 로컬 대화 저장 및 이력 조회 (기본)
 - **Vertex AI Memory Bank**: 클라우드 대화 저장 (선택사항)
 
@@ -72,9 +72,9 @@ empathetic_chatbot_project/
     └── package.json
 ```
 
-## 🚀 설치 및 실행
+## 설치 및 실행
 
-### 1️⃣ Backend 설정
+### Backend 설정
 
 #### Python 환경 설정
 ```bash
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 - **Facebook MMS-TTS**: facebook/mms-tts-kor (~400MB)
 - **Qwen3-14B**: Qwen/Qwen3-14B (~28GB) - 파인튜닝 모델이 없을 때만
 
-⚠️ **참고**: 모델 다운로드에 시간이 소요됩니다 (인터넷 속도 및 디스크 공간 필요).
+**참고**: 모델 다운로드에 시간이 소요됩니다 (인터넷 속도 및 디스크 공간 필요).
 
 **수동 배치 모델** (선택사항):
 
@@ -109,8 +109,8 @@ pip install -r requirements.txt
    ```
    - 공감 대화에 최적화된 파인튜닝 Qwen3-14B 모델
    - **모델 우선순위**:
-     1. `finetuned-model/` 존재 → 파인튜닝 모델 사용 ✅
-     2. 없는 경우 → 기본 Qwen3-14B 자동 다운로드 ⬇️
+     1. `finetuned-model/` 존재 → 파인튜닝 모델 사용
+     2. 없는 경우 → 기본 Qwen3-14B 자동 다운로드
 
 2. **감정 분류 모델**
    ```
@@ -130,7 +130,7 @@ python main.py
 - **API 문서**: http://localhost:8000/docs
 - **Health Check**: http://localhost:8000/api/chat/health
 
-### 2️⃣ Mobile 앱 설정
+### Mobile 앱 설정
 
 ```bash
 cd mobile
@@ -147,7 +147,7 @@ export const API_BASE_URL = __DEV__
   : 'https://your-backend-url.com';  // 프로덕션: 실제 서버 주소
 ```
 
-## 📡 API 엔드포인트
+## API 엔드포인트
 
 ### 음성 채팅
 ```http
@@ -199,9 +199,9 @@ GET /api/history/conversations/{conversation_id}
 DELETE /api/history/conversations/{conversation_id}
 ```
 
-📖 **API 문서**: http://localhost:8000/docs
+**API 문서**: http://localhost:8000/docs
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 ### Backend
 | 기술 | 버전 | 용도 |
@@ -223,7 +223,7 @@ DELETE /api/history/conversations/{conversation_id}
 | **React Navigation** | 화면 네비게이션 |
 | **Expo Audio** | 음성 녹음/재생 |
 
-## ⚙️ 선택 기능: Vertex AI Memory Bank
+## 선택 기능: Vertex AI Memory Bank
 
 SQLite 외에 Google Cloud Vertex AI Memory Bank를 사용하여 대화 이력을 클라우드에 저장할 수 있습니다.
 
@@ -244,7 +244,7 @@ SQLite 외에 Google Cloud Vertex AI Memory Bank를 사용하여 대화 이력�
 
 자세한 내용: [Vertex AI 공식 문서](https://cloud.google.com/vertex-ai)
 
-## 💡 사용 예시
+## 사용 예시
 
 ### cURL
 ```bash
@@ -278,7 +278,7 @@ response = requests.post(
 print(response.json())
 ```
 
-## 🔧 문제 해결
+## 문제 해결
 
 ### 모델 다운로드 실패
 - 인터넷 연결 확인
@@ -300,11 +300,11 @@ print(response.json())
 - `config.js`의 API_BASE_URL 확인
 - 방화벽 설정 확인
 
-## 📄 라이선스
+## 라이선스
 
 MIT License
 
-## 🤝 기여
+## 기여
 
 이슈와 Pull Request는 언제나 환영합니다!
 
