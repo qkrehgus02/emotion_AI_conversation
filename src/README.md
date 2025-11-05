@@ -32,7 +32,7 @@
 - **SQLite**: 로컬 대화 저장 및 이력 조회 (기본)
 - **Vertex AI Memory Bank**: 클라우드 대화 저장 (선택사항)
 
-## 🏗️ 프로젝트 구조
+## 프로젝트 구조
 
 ```
 empathetic_chatbot_project/
