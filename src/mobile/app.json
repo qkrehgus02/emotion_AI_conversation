@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "공감 챗봇",
+    "slug": "empathetic-chatbot",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366f1"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.empathetic-chatbot",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "이 앱은 음성 녹음을 위해 마이크 접근 권한이 필요합니다.",
+        "NSSpeechRecognitionUsageDescription": "이 앱은 음성 인식을 위해 권한이 필요합니다."
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.empathetic_chatbot",
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6366f1"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "이 앱은 음성 녹음을 위해 마이크 접근 권한이 필요합니다."
+        }
+      ]
+    ]
+  }
+}

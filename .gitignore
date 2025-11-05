@@ -1,0 +1,98 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# AI Models
+*.pth
+*.pt
+*.h5
+*.pkl
+*.pickle
+*.safetensors
+*.bin
+*.onnx
+*.pb
+src/backend/models/models--*/
+src/backend/models/tts_models/
+src/backend/models/finetuned-model/
+src/backend/models/emotionExtract.pth
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Uploads directory
+src/backend/uploads/
+src/backend/data/
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React Native / Expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.lnk
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
